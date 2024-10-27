@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoScan Docs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="icon" href="/web/assets/web-page.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated animate__fadeIn">GoScan Documentation 🚀</h1>
+        <p>Explorez et découvrez les fonctionnalités clés de GoScan</p>
+    </header>
+    <main>
+        <section id="overview" data-aos="fade-up">
+            <h2>Introduction 📖</h2>
+            <p>Un scanner d'URLs simple et efficace en Go, permettant de tester rapidement une liste de mots sur une URL de base pour détecter des chemins potentiels.</p>
+        </section>
+        <section id="installation" data-aos="fade-up">
+            <h2>Installation ⚙️</h2>
+            <pre><code>go run main.go -url &lt;URL&gt; -wordlist &lt;file&gt;</code></pre>
+        </section>
+        <section id="installation" data-aos="fade-up">
+            <h2>Prérequis 🛠️</h2>
+            <p>Go (version 1.16 ou supérieure) <br>
+                Accès à internet pour le fonctionnement du scanner.</p>
+        </section>
+        <section id="utilisation" data-aos="fade-up">
+            <h2>Utilisation 💻</h2>
+            <ul>
+                <li><span class="option">-url</span> : URL de base à scanner</li>
+                <li><span class="option">-wordlist</span> : Fichier contenant la wordlist</li>
+                <li><span class="option">-c</span> : Cookie pour les requêtes HTTP</li>
+                <li><span class="option">-a</span> : agent [Choppe ton UA]</li>
+                <li><span class="option">-E</span> : Chemin vers le certificat client | [Inutile]</li>
+                <li><span class="option">-p</span> : URL du proxy | format : (http://proxyip:port/)</li>
+                <li><span class="option">-X</span> : Extensions à ajouter aux mots format : mot-clé</li>
+                <li><span class="option">-z</span> : Délai entre les requêtes en millisecondes</li>
+                <li><span class="option">-u</span> : Nom d'utilisateur pour l'authentification HTTP</li>
+                <li><span class="option">-p</span> : Mot de passe pour l'authentification HTTP</li>
+                <li><span class="option">-i</span> : Recherche insensible à la casse</li>
+                <li><span class="option">-S</span> : Mode silencieux (ne pas afficher les mots testés)</li>
+            </ul>
+        </section>
+    </main>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        AOS.init(); 
+        ScrollReveal().reveal('#overview', { duration: 1000, origin: 'left', distance: '50px' });
+        ScrollReveal().reveal('#installation', { duration: 1000, origin: 'right', distance: '50px' });
+        ScrollReveal().reveal('#utilisation', { duration: 1000, origin: 'bottom', distance: '50px' });
+
+        window.onload = function() {
+            gsap.from("header h1", { duration: 1, y: -50, opacity: 0 });
+        };
+    </script>
+</body>
+</html>

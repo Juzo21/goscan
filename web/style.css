@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Utilisation de Google Fonts */
+    background-color: #e9ecef; /* Couleur de fond douce */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #000000 0%, #333232 100%); /* Dégradé de couleur */
+    color: #fff;
+    border-bottom: 5px solid #333; /* Ligne en bas de l'en-tête */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 800px; /* Limiter la largeur pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre le contenu */
+    padding: 0px;
+}
+
+section {
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Animation pour l'effet d'élévation */
+}
+/* Réduire la marge du header */
+header {
+    margin-bottom: 10px; /* Ajustez cette valeur selon vos besoins */
+}
+
+/* Réduire la marge des sections */
+main > section {
+    margin-top: 10px; /* Ajustez cette valeur selon vos besoins */
+}
+
+/* Assurez-vous que les sections n'ont pas de padding trop important */
+section {
+    padding: 50px; /* Ajustez ce padding si nécessaire */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4e73df; /* Ligne en bas du titre de section */
+    padding-bottom: 5px; /* Espace entre le texte et la ligne */
+}
+
+pre {
+    background: #343a40; /* Couleur sombre pour le code */
+    color: #f8f9fa; /* Couleur claire pour le texte */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding: 0; /* Supprime le remplissage par défaut */
+}
+
+li {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espace entre les éléments */
+    padding: 10px 0; /* Espace vertical entre les éléments de la liste */
+    border-bottom: 1px solid #ccc; /* Ligne de séparation entre les éléments */
+}
+
+.option {
+    font-weight: bold; /* Met en gras le texte à gauche */
+    min-width: 100px; /* Définit une largeur minimale pour aligner le texte à droite */
+    text-align: right; /* Aligne le texte à droite */
+}
+
+img {
+    display: block;
+    margin: 20px auto; /* Centre l'image horizontalement */
+    max-width: 50%; /* Assure que l'image ne déborde pas */
+    height: auto; /* Maintient le ratio de l'image */
+}
